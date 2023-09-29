@@ -135,14 +135,7 @@ header {
     color:var(--main-color)
 }
 
-iframe {
-    width: 62%;
-    margin-right:0%;
-    margin-top: 15%;
-    position: absolute;
 
-    z-index: 2;
-    top: 2;
     
 }
 /*responsive when size of screen is change*/
