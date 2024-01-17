@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
    
     
@@ -16,10 +16,8 @@
 
 
 body {
-    background-image: url("backgroungImg.jpg");
-    background-size: cover ;
-    
-  font-family: Arial, Helvetica, sans-serif;
+    background: url('image10.jpeg') no-repeat center center fixed;
+    background-size: cover;
   min-height: 100vh;
   overflow-x: hidden;
   margin: 0;
@@ -134,10 +132,17 @@ header {
     background: transparent;
     color:var(--main-color)
 }
+/* 
+iframe {
+    width: 62%;
+    margin-right:0%;
+    margin-top: 15%;
+    position: absolute;
 
-
+    z-index: 2;
+    top: 2;
     
-}
+} */
 /*responsive when size of screen is change*/
 @media(max-width: 950px){
     .share{
@@ -160,7 +165,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    background-image: linear-gradient(rgb(1, 1, 56),rgb(29, 29, 168));
+    background-image: linear-gradient(rgb(36,16,75),rgb(73,25,133));
     align-items: center;
     padding: 70px 10% 0;
     height: 100vh;
@@ -245,5 +250,118 @@ header {
     transform: scale(1.2);
 }
 
+.heading{
+    font-size: 56px;
+    font-weight: 700;
+    margin :-3px 0;
+}
+
+.projects{
+    //background: url('image10.jpeg') 
+}
+
+.projects h2{
+    margin-bottom: 4rem;
+}
+
+.projects_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.projects_container .project-box {
+position: relative;
+border-radius: 2rem;
+box-shadow:  0 0 1rem whitesmoke;
+overflow: hidden;
+display: flex;
+}
+
+.project-box img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    transition: 0.5s ease;
+}
+
+.project-box:hover img{
+    transform: scale(1.1);
+
+}
+
+.project-box .project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0, .1), rgb(26,103,190));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+
+
+}
+
+.project-box:hover .project-layer{
+    transform: translateY(0);
+}
+
+.project-layer h4 {
+    font-size: 3rem;
+}
+
+.project-layer p{
+    font-size: 1.6rem;
+    margin:  .3rem 0 1rem;
+}
+
+.project-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: white;
+    border-radius: 50%;
+
+}
+
+.project-layer a i{
+    font-size: 2rem;
+    color: blue ;
+
+}
+
+
+
+/* Add media queries for different screen sizes */
+@media (max-width: 768px) {
+    .project-layer h4 {
+        font-size: 2.5rem;
+    }
+
+    .project-layer p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-layer h4 {
+        font-size: 2rem;
+    }
+
+    .project-layer p {
+        font-size: 1.2rem;
+    }
+}
 
 /* Increase the font size of the h1 element */

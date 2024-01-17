@@ -7,6 +7,20 @@ window.addEventListener('scroll',() =>{
     pg1text.style.marginTop = value * 2.5 + 'px';
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const downloadButton = document.querySelector('.btn');
+    
+    downloadButton.addEventListener('click', function () {
+      const resumeUrl = this.getAttribute('href');
+      const link = document.createElement('a');
+      link.href = resumeUrl;
+      link.download = 'EvelineChazaRESUME.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  });
+
 const headLine = new SplitType('h1')
         const myText2 = new SplitType('p', {charClass:'char2'})
         var tl = gsap.timeline({defaults: {ease: "Expo.easeInOut"}})
